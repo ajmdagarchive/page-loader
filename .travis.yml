@@ -1,5 +1,4 @@
 ---
-# single test suite, non-parallel build.
 
 language: node_js
 node_js:
@@ -12,7 +11,7 @@ before_script:
 
 script:
   - make lint
-  - npm t -- --coverage
+  - npm run test -- --coverage
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
